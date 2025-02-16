@@ -1,0 +1,21 @@
+/* Funfando no Brave */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--trocar-cor) #070d12;
+  }
+  
+  /* Funfando no Chrome e Edge */
+  *::-webkit-scrollbar {
+    width: 14px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #070d12c0;
+    border-radius: 25px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--trocar-cor);
+    border-radius: 25px;
+    border: 3px solid #070d12;
+  }

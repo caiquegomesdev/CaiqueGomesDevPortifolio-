@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Financiamento</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+    <link rel="icon" href="money.ico" type="">
+</head>
+<body>
+    <h1>Simulador de Financiamento</h1>
+    <h2>Sistema de Amortização Constante (SAC)</h2>
+    <div class="form">
+        <input id="textoValor" type="number" placeholder="Valor do bem" step="0.01">
+        <input id="textoEntrada" type="number" placeholder="Valor da Entrada" step="0.01">
+        <input id="textoTaxaJuros" type="number" placeholder="Taxa de Juros (%)" step="0.01">
+        <input id="textoPrazo" type="number" placeholder="Prazo (em meses)" min="1">
+        <button id="botaoCalcular">Calcular</button>
+        <input id="comCarencia" type="checkbox">Com carência?
+        <select id="listaSuspensa" hidden>
+            <option value="2">2 meses</option>
+            <option value="3">3 meses</option>
+            <option value="4">4 meses</option>
+        </select>
+    
+        <p id="erroMensagem"></p> <!-- Para exibir mensagens de erro -->
+        
+       
+    </div>
+    
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Valor da Parcela</th>
+                    <th>Amortização</th>
+                    <th>Juros</th>
+                    <th>Saldo Devedor</th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela">
+
+            </tbody>
+        </table> 
+        <!-- Novo campo para exibir o valor total -->
+        <div id="valorTotalDiv">
+            <h3>Valor Total a Pagar:</h3>
+            <p id="valorTotal"></p> <!-- Aqui será exibido o valor total -->
+        </div>
+    </div>
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="./exception.js"></script>
+
+</body>
+</html>
